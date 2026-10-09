@@ -1,0 +1,14 @@
+    <header class="main-header">    
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a class= "<%= path === '/' ? 'active': '' %>" href="/">Kezdőlap</a></li>
+                <li class="main-header__item"><a class= "<%= (path === '/overview' || path === '/overview/new') ? 'active': '' %>" href="/overview">Áttekintés</a></li>
+                <li class="main-header__item"><a class= "<%= path === '/network' ? 'active': '' %>" href="/network">Hálózati térkép</a></li>
+                <li class="main-header__item"><a class= "<%= (path === '/vulnerabilities' || path === '/vulnerabilities/details') ? 'active': '' %>" href="/vulnerabilities">Sérülékenységek</a></li>
+                <li class="main-header__item"><a class= "<%= path === '/risk-assessment' ? 'active': '' %>" href="/risk-assessment">Kockázatelemzés</a></li>
+                <li class="main-header__item"><a class= "<%= (path === '/protection' || path === '/protection/details') ? 'active': '' %>" href="/protection">Védelem/Ajánlások</a></li>
+                <li class="main-header__item"><a class= "<%= path === '/monitoring' ? 'active': '' %>" href="/monitoring">Monitoring</a></li>
+                <li class="main-header__item"><a class= "<%= path === '/documentation' ? 'active': '' %>" href="/documentation">Doumentáció</a></li>
+            </ul>
+        </nav>
+    </header>

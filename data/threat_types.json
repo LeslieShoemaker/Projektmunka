@@ -1,0 +1,84 @@
+[
+    {
+      "id": "T1",
+      "name": "DDS discovery manipuláció / spoofing",
+      "description": "DDS résztvevők és discovery metaadatok",
+      "affected_device": "Robot kommunikációs topológia, végpontok",
+      "probability": 3,
+      "effect": 4,
+      "perception_difficulty": 5,
+      "weighted_score": 79,
+      "risk_cathegory": "Magas",
+      "priority": 2,
+      "security_controll":  "Discovery védelem, SROS2, hálózati szegmentáció"
+    },
+    {
+      "id": "T2",
+      "name": "Jogosulatlan adatbefecskendezés",
+      "description": "ROS2 topic / service kommunikáció",
+      "affected_device": "Vezérlési és szenzoradatok integritása",
+      "probability": 4,
+      "effect": 5,
+      "perception_difficulty": 5,
+      "weighted_score": 94,
+      "risk_cathegory": "Kritikus",
+      "priority": 1,
+      "security_controll":  "Hitelesítés, access control, topic-szintű jogosultság"
+    },
+    
+    { 
+      "id": "T3",
+      "name": "DDS/RTPS DoS és erőforrás-kimerítés",
+      "description": "Kommunikációs middleware",
+      "affected_device": "Elérhetőség és reakcióidő",
+      "probability": 4,
+      "effect": 4,
+      "perception_difficulty": 5,
+      "weighted_score": 85,
+      "risk_cathegory": "Kritikus",
+      "priority": 1,
+      "security_controll":  "Rate limiting, QoS korlátok, hálózati ACL, monitoring"
+    },
+    
+    {
+      "id": "T4",
+      "name": "Hibás/malicious RTPS üzenet",
+      "description": "DDS implementáció",
+      "affected_device": "Node/middleware stabilitása",
+      "probability": 3,
+      "effect": 4,
+      "perception_difficulty": 5,
+      "weighted_score": 79,
+      "risk_cathegory": "Magas",
+      "priority": 2,
+      "security_controll":  "DDS verziófrissítés, fuzzing, input-validáció"
+    },
+    
+    {
+      "id": "T5",
+      "name": "Lehallgatás / metadata felderítés",
+      "description": "DDS topicok és discovery",
+      "affected_device": "Bizalmasság, rendszerfelépítés",
+      "probability": 3,
+      "effect": 3,
+      "perception_difficulty": 4,
+      "weighted_score": 65,
+      "risk_cathegory": "Magas",
+      "priority": 2,
+      "security_controll":  "Titkosítás, discovery protection, hálózati izoláció"
+    },
+    
+    {
+      "id": "T6",
+      "name": "Kulcs/credential kompromittálódás",
+      "description": "SROS2 keystore és tanúsítványok",
+      "affected_device": "Hitelesített identitás",
+      "probability": 2,
+      "effect": 5,
+      "perception_difficulty": 5,
+      "weighted_score": 82,
+      "risk_cathegory": "Kritikus",
+      "priority": 1,
+      "security_controll":  "Kulcskezelés, minimális jogosultság, supply-chain kontroll"
+    }
+]

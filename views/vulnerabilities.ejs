@@ -1,0 +1,55 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+   
+    <%- include('includes/navigation.ejs') %>
+
+    <h1><%= dummy %></h1>
+
+    <br>
+    <br>
+
+    <% if (vulnerabilities.length > 0) { %>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>description</th>
+                    <th>affected_device</th>
+                    <th>probability</th>
+                    <th>effect</th>
+                    <th>perception_difficulty</th>
+                    <th>weighted_score</th>
+                    <th>risk_cathegory</th>
+                    <th>priority</th>
+                    <th>security_controll</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (vulnerability of vulnerabilities) { %>
+                <tr>
+                    <td><%= vulnerability.id %></td>
+                    <td><%= vulnerability.name %></td>
+                    <td><%= vulnerability.description %></td>
+                    <td><%= vulnerability.affected_device %></td>
+                    <td><%= vulnerability.probability %></td>
+                    <td><%= vulnerability.effect %></td>
+                    <td><%= vulnerability.perception_difficulty %></td>
+                    <td><%= vulnerability.weighted_score %></td>
+                    <td><%= vulnerability.risk_cathegory %></td>
+                    <td><%= vulnerability.priority %></td>
+                    <td><%= vulnerability.security_controll %></td>
+                </tr>
+                <% }%>
+                
+            </tbody>
+        </table>
+    </div>
+     <% } else { %>
+    <h1>No Vulnerability Found!</h1>
+    <% } %>
+<%- include('includes/end.ejs')%>
+    
